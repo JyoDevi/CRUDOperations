@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:th="www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+		<h1>Update Customer Details</h1>
+		<form th:action="@{/save}" th:object = "${customer}" th:method=put>
+		<label for="id"> Customer ID:</label>
+		<input type="number" th:field="*{ custid}" id="id" name="id" readonly/>
+		<label for="name"> Customer Name:</label>
+		<input type="text" th:field="*{name}" id="id" name="name"/>
+		<label for="id"> Customer Email:</label>
+		<input type="text" th:field="*{ email}" id="email" name="email}"/>
+		<label for="id"> Customer Location:</label>
+		<input type="text" th:field="*{ location}" id="location" name="location"/>
+		<label for="balance"> Customer Balance:</label>
+		<input type="number" th:field="*{ balance}" id="balance" name="balance"/>
+						
+		</form>
+</body>
+</html>
